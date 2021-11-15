@@ -142,6 +142,10 @@
         $("#tfor").click(function(){
                 $("#formul").show();
             });
+        $("#sea").click(function(){
+          var s = $("#seat").val();
+          $("iframe").attr("src", "https://footmal.000webhostapp.com/php.php?q=" + s)
+        });
       	$("#chen1").click(function() {
       		$("#center").show();
       		$("#edfiz").hide();
@@ -1332,5 +1336,7 @@ if(num == "." && num2.indexOf(".") != -1) {
       <button class="but" id="ravno" style="background-color: orange;color: white; padding: 4px 24px">=</button>
       <button class="but st" style="background-color: orange;color: white; padding: 3px 4px">cot</button>
     </div>
+    <input type="text" id="seat"/><button id="sea">search</button><br/>
+    <iframe></iframe>
   </body>
 </html>
