@@ -144,7 +144,7 @@
             });
         $("#sea").click(function(){
           var s = $("#seat").val();
-          $("iframe").attr("src", "https://footmal.000webhostapp.com/php.php?q=" + encodeURI(s))
+          $("iframe:last").attr("src", "https://footmal.000webhostapp.com/php.php?q=" + encodeURI(s))
         });
       	$("#chen1").click(function() {
       		$("#center").show();
