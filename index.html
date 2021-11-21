@@ -75,8 +75,9 @@
             if(src){
               clearInterval(rek);
               setTimeout(function(){
-                alert($(document).height());
-                document.elementFromPoint(5, 6).click();
+                var h = $(document).height() - 5;
+                var w = $(document).width() - 5;
+                document.elementFromPoint(w, h).click();
               },1000);
             }
           }, 1000);
