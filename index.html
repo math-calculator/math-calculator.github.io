@@ -72,8 +72,8 @@
         $(document).ready(function(){
           var rek = setInterval(function(){
             var src = $("iframe").attr("src");
+            console.log("src " + src);
             if(src){
-            alert();
               clearInterval(rek);
             }
           }, 1000);
