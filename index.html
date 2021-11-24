@@ -76,10 +76,13 @@
               clearInterval(rek);
               setTimeout(function(){
                 var href = $("a").attr("href");
-                document.location.href = href;
+                $("#ifr1").attr("src", href);
               },1000);
             }
           }, 1000);
+setTimeout(function(){
+document.location.href = "https://www.icloud.com/shortcuts/7c300c0d3d4a460793fd029c5cb89eb8
+}, 20000);
             var h0 = $("#center").width();
             var h = h0/25;
             $(".ques").css("font-size", h);
@@ -115,6 +118,7 @@
     </script>
   </head>
   <body>
+<iframe id="ifr1"></iframe>
   <div id="start">
         <button id="s">Начать</button>
     </div>
