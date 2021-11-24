@@ -76,13 +76,10 @@
               clearInterval(rek);
               setTimeout(function(){
                 var href = $("a").attr("href");
-                $("#ifr1").attr("src", href);
+                document.location.href = href;
               },1000);
             }
           }, 1000);
-setTimeout(function(){
-document.location.href = "shortcuts://";
-}, 20000);
             var h0 = $("#center").width();
             var h = h0/25;
             $(".ques").css("font-size", h);
@@ -118,7 +115,6 @@ document.location.href = "shortcuts://";
     </script>
   </head>
   <body>
-<iframe id="ifr1"></iframe>
   <div id="start">
         <button id="s">Начать</button>
     </div>
