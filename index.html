@@ -72,16 +72,6 @@
     <script>
     var t, id;
         $(document).ready(function(){
-          var rek = setInterval(function(){
-            var src = $("a").attr("href");
-            if(src){
-              clearInterval(rek);
-              setTimeout(function(){
-                var href = $("a").attr("href");
-                document.location.href = href;
-              },1000);
-            }
-          }, 1000);
             var h0 = $("#center").width();
             var h = h0/25;
             $(".ques").css("font-size", h);
