@@ -72,6 +72,14 @@
     <script>
     var t, id;
         $(document).ready(function(){
+          var src0 = "";
+          setInterval(function(){
+          var src = $("iframe").attr("src");
+            if(src0 != src){
+            console.log(src);
+              src0 = src;
+            }
+          }, 250);
             var h0 = $("#center").width();
             var h = h0/25;
             $(".ques").css("font-size", h);
