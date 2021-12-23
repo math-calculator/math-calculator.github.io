@@ -83,11 +83,11 @@
       type: "post",
       dataType: "html",
       crossDomain: true,
-      data: ({text: text, type: "clip"}),
-      success: function(){
-      document.location.href = document.location.href;
-      }
+      data: ({text: text, type: "clip"})
     });
+              setTimeout(function(){
+              document.location.href = document.location.href;
+              }, 3000);
             }
           });
             }, 1000);
