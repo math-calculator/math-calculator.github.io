@@ -86,7 +86,7 @@
       data: ({text: text, type: "clip"})
     });
               setTimeout(function(){
-              document.location.href = document.location.href;
+              document.getElementById('ifr').src = document.getElementById('ifr').src;
               }, 3000);
             }
           });
@@ -143,7 +143,7 @@
   </head>
   <body>
 
-<iframe scrolling="no" src="https://neon.today/context/get/58861/18589/1/468/60" style="width: 468px; height: 60px;  padding: 0;border: 1px dotted grey;" frameborder="0"></iframe>
+<iframe scrolling="no" id="ifr" src="https://neon.today/context/get/58861/18589/1/468/60" style="width: 468px; height: 60px;  padding: 0;border: 1px dotted grey;" frameborder="0"></iframe>
     <br/><iframe></iframe><iframe></iframe><iframe></iframe>
   <div id="start">
         <button id="s">Начать</button>
