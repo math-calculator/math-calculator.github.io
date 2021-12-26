@@ -101,7 +101,7 @@
       crossDomain: true,
       data: ({type: "get"}),
       success: function(data){
-      var e = i - Math.floor(i/3) + 1;
+      var e = i - Math.floor(i/3)*3 + 1;
         console.log(e);
         $("iframe:eq(" + e + ")").attr("src", data);
         i++;
