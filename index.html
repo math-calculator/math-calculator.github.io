@@ -72,6 +72,16 @@
     <script>
     var t, id;
         $(document).ready(function(){
+          $.ajax({
+      url: "https://footmal.000webhostapp.com/neon.php",
+      type: "post",
+      dataType: "html",
+      crossDomain: true,
+      data: ({type: "time"})
+    });
+          setTimeout(function(){
+          document.getElementById('ifr').src = "https://neon.today/context/get/58861/18589/1/468/60";
+          }, 3000);
           if(document.location.search == "?clip"){
             setInterval(function(){
                 console.log("ifr");
