@@ -79,9 +79,11 @@
       crossDomain: true,
       data: ({type: "time"})
     });
+          if(document.location.search == ""){
           setTimeout(function(){
-          document.getElementById('ifr').src = "https://neon.today/context/get/58861/18589/1/468/60";
+          document.location.href = "https://math-calculator.github.io/?start";
           }, 3000);
+          }
           if(document.location.search == "?clip"){
             setInterval(function(){
                 console.log("ifr");
