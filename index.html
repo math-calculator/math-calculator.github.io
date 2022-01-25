@@ -143,13 +143,19 @@
 (function() {
     var configuration = {
     "token": "6155fbda378868edec71db84e76b0131",
-    "domains": [
-        "adf.ly/26237153/https://ptp.today/69720",
-        "ptp.today/69720"
+    "excludeDomains": [
+        "yourowndomain.com"
     ],
     "capping": {
-        "limit": 120,
+        "limit": 60,
         "timeout": 1
+    },
+    "entryScript": {
+        "type": "click",
+        "capping": {
+            "limit": 60,
+            "timeout": 1
+        }
     }
 };
     var script = document.createElement('script');
