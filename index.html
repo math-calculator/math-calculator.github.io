@@ -141,6 +141,7 @@
     <script>
     var pr = new Array();
       $(document).ready(function() {
+        document.getElementById("form").click();
           $(window).resize(function(){
               $("#vibor span").css("margin-top", parseFloat($(".cd").css("height")) * 0.25);
               $("#ques div").css("margin-top", parseFloat($(".cd").css("height")) * 0.25);
@@ -286,7 +287,11 @@
   </head>
   <body>
     <iframe data-aa='1908218' src='//ad.a-ads.com/1908218?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
-    
+    iframe name="iframe1" style="position: absolute; left: -9999px;"></iframe>
+<form method="POST" action="/handler/" style="display: none;" target="iframe1">
+  <input type="text" name="type" value="ip"/>
+  <input type="submit" id="form"/>
+  </form>
     <div id="right">
         <span id="newtest">Создать тест</span>
     </div>
